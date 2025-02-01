@@ -5,3 +5,5 @@ bin/
 .settings
 .classpath
 .project
+pom.xml
+README.mdS
