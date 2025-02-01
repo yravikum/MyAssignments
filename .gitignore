@@ -1,0 +1,7 @@
+target/
+bin/
+.gitattributes
+.DS_Store
+.settings
+.classpath
+.project
