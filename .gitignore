@@ -1,8 +1,7 @@
 target/
 bin/
-.gitattributes/
+.gitattributes
 .DS_Store
 .settings
 .classpath
 .project
-pom.xml/
