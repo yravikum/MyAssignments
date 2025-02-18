@@ -37,7 +37,8 @@ public class CreateAccount {
 		driver.findElement(By.linkText("Create Account")).click();
 
 		// Enter Account Name
-		driver.findElement(By.id("accountName")).sendKeys("Feb-2025 Learning Batch");
+		driver.findElement(By.id("accountName")).sendKeys("Feb-2025 Learning Batch 05");
+		String accountName = driver.findElement(By.id("accountName")).getText();
 
 		// Enter Description
 		driver.findElement(By.name("description")).sendKeys("Selenium Automation Tester");
@@ -70,9 +71,16 @@ public class CreateAccount {
 
 		// Click the "Create Account" button
 		driver.findElement(By.xpath("//input[@value='Create Account']")).click();
-		
+
 		// Verify that the account name is displayed correctly
 		// Needs advanced x-path concepts will implement later
+		String text = driver.findElement(By.xpath("(//span[@class='tabletext'])[3]")).getText();
+
+		if (text.contains(accountName)) {
+			System.out.println("Account name is verified");
+		} else {
+			System.out.println("Account name is not matched");
+		}
 
 		// Click Logout Button
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
